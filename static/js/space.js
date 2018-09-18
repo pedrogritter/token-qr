@@ -1,5 +1,3 @@
-window.scrollTo(0, 1);
-
 var canvas = document.getElementById('space_box');
 var c = canvas.getContext('2d');
 
@@ -17,8 +15,8 @@ var innerWidth = window.innerWidth - 20,
 	starY = null,
 	numStars = 2000,
 	mouse = {},
-	starX_dir = 0,
-	starY_dir = 0;
+	starX_dir = 50,
+	starY_dir = 40;
 
 	canvas.width = innerWidth;
 	canvas.height = innerHeight;
@@ -42,6 +40,24 @@ window.addEventListener('mousemove', function(e){
      starY_dir += -5;
    }
 
+});
+
+// Move the stars with mobile orientation
+window.addEventListener('deviceorientation', function(event) {
+    orientation.x = event.alfa;
+    orientation.y = event.beta;
+
+    if (orientation.x < centerX){
+        starX_dir += 5;
+    }else{
+        starX_dir += -5;
+    }
+
+    if (orientation.y < centerY) {
+        starY += 5;
+    }else{
+        starY += -5;
+    }
 });
 
 // Zoom in/out into the Space on mouse scroll
