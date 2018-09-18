@@ -1,18 +1,43 @@
 <!DOCTYPE html>
 <html lang="en-us">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<title>Space - Moving Stars</title>
-</head>
-<body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <title>Space - Moving Stars</title>
+        <style>
+            #space_box {
+                position: fixed;
+                width:100%;
+                height: 100%;
+            }
 
-<canvas id="space_box" style="background:#000;"></canvas>
-<script type="text/javascript" src="js/space.js"></script>
+            .centered {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+            }
+        </style>
+        <link rel="stylesheet" type="text/css" href="css/glitch.css">
 
-<audio controls autoplay>
-  <source src="audio/Acronym-16-Cygni.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-</body>
+    </head>
+    <body style="background-color:#000;">
+
+        <canvas id="space_box" style="background:#fff;"></canvas>
+        <script type="text/javascript" src="js/space.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+        <div class="glitch centered" data-text="Token">
+            <span class="glitch__color glitch__color--red">Token</span>
+            <span class="glitch__color glitch__color--green">Token</span>
+            <span class="glitch__color glitch__color--">Rave</span>
+            <span class="glitch__main">Token</span>
+            <span class="glitch__line glitch__line--first"></span>
+        </div>
+
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/492344556&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+        <!--<audio controls &lt;!&ndash; autoplay&ndash;&gt; >-->
+          <!--<source src="audio/Acronym-16-Cygni.mp3" type="audio/mpeg">-->
+          <!--Your browser does not support the audio element.-->
+        <!--</audio>-->
+    </body>
 </html>

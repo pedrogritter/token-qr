@@ -1,5 +1,6 @@
 var canvas = document.getElementById('space_box');
 var c = canvas.getContext('2d');
+
 var innerWidth = window.innerWidth - 20,
     innerHeight = window.innerHeight - 20,
 	radius = 1,
@@ -8,7 +9,7 @@ var innerWidth = window.innerWidth - 20,
 	TWO_PI = Math.PI*2,
 	centerX = innerWidth/2,
 	centerY = innerHeight/2,
-	focalLength = 100,
+	focalLength = 500,
 	starRadius = null,
 	starX = null,
 	starY = null,
@@ -19,7 +20,6 @@ var innerWidth = window.innerWidth - 20,
 
 	canvas.width = innerWidth;
 	canvas.height = innerHeight;
-
 
 
 // Move the stars with mouse pointer
@@ -52,8 +52,8 @@ canvas.addEventListener('mousewheel', function(e){
 
    if(focalLength >= innerWidth){
      focalLength = innerWidth - 20;
-   }else if(focalLength < 100){
-     focalLength = 100;
+   }else if(focalLength < 500){
+     focalLength = 500;
    }
 
 }, false);
@@ -83,7 +83,7 @@ function star(x,y,z){
 	  starX += starX_dir;
 	  starY += starY_dir;
 
-	  this.z += -10;
+	  this.z += -3;
 
 	  if(this.z <= 0){
 	     this.z = parseInt(innerWidth);
