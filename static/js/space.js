@@ -1,3 +1,5 @@
+window.scrollTo(0, 1);
+
 var canvas = document.getElementById('space_box');
 var c = canvas.getContext('2d');
 
@@ -65,7 +67,7 @@ function star(x,y,z){
 	this.y = y;
 	this.z = z;
 	this.radius = radius;
-	this.color = "#fff";
+	this.color = "#C1B3BA";
 	starsIndex++;
 	stars[starsIndex] = this;
 	this.id = starsIndex;
