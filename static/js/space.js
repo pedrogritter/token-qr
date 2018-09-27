@@ -3,7 +3,7 @@ var c = canvas.getContext('2d');
 
 var innerWidth = window.innerWidth - 20,
     innerHeight = window.innerHeight - 20,
-	radius = 1,
+	radius = 0.8,
 	starsIndex = 0,
 	stars = [],
 	TWO_PI = Math.PI*2,
@@ -15,6 +15,7 @@ var innerWidth = window.innerWidth - 20,
 	starY = null,
 	numStars = 2000,
 	mouse = {},
+	orientation= {},
 	starX_dir = 50,
 	starY_dir = 40;
 
@@ -43,22 +44,26 @@ window.addEventListener('mousemove', function(e){
 });
 
 // Move the stars with mobile orientation
-window.addEventListener('deviceorientation', function(event) {
-    orientation.x = event.alfa;
-    orientation.y = event.beta;
-
-    if (orientation.x < centerX){
-        starX_dir += 5;
-    }else{
-        starX_dir += -5;
-    }
-
-    if (orientation.y < centerY) {
-        starY += 5;
-    }else{
-        starY += -5;
-    }
-});
+//window.addEventListener('deviceorientation', function(event) {
+//    orientation.x = event.alfa;
+//    orientation.y = event.beta;
+//
+//    console.log(orientation.x);
+//    console.log(orientation.y);
+//
+//
+//    if (orientation.x < centerX){
+//        starX_dir += 5;
+//    }else{
+//        starX_dir += -5;
+//    }
+//
+//    if (orientation.y < centerY) {
+//        starY += 5;
+//    }else{
+//        starY += -5;
+//    }
+//});
 
 // Zoom in/out into the Space on mouse scroll
 canvas.addEventListener('mousewheel', function(e){
