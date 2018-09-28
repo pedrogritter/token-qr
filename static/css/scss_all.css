@@ -1,7 +1,7 @@
 .glitch {
-  animation: glitch-skew 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s infinite;
+  animation: glitch-skew 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 4s infinite;
   font-family: orbitron, sans-serif;
-  font-size: 500%;
+  font-size: 400%;
   font-weight: 900;
   line-height: 1;
   text-align: center;
@@ -13,7 +13,7 @@
       font-size: 800%;   }
 }
     .glitch__main {
-      color: #FFF; }
+      color: #FF3333; }
       .glitch__color {
         height: 100%;
         left: 0;

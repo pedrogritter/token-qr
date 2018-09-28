@@ -1,5 +1,5 @@
 .glitch {
-                animation: glitch-skew 4s cubic-bezier(.25, .46, .45, .94) 4s infinite;
+                animation: glitch-skew 5s cubic-bezier(.25, .46, .45, .94) 4s infinite;
                 font-family: orbitron, sans-serif;
                 font-size: 400%;
                 font-weight: 900;
@@ -17,7 +17,7 @@
                 position: relative;
 
                 &__main {
-                    color: #FFF;
+                    color: #FF3333;
                 }
 
                 &__color {
