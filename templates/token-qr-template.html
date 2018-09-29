@@ -55,6 +55,14 @@
                     }
               }
 
+             //function openEventBox(id,option) {
+               // var element = document
+             //}
+
+             function playAudio(id) {
+                document.getElementById(id).muted = false;
+             }
+
              function muteAudio(id) {
                 document.getElementById(id).muted = true;
              }
@@ -90,30 +98,61 @@
                             <div class="tile is-parent">
                                 <article class="tile is-parent is-vertical" style="background-color: rgba(25,25,25,0.7);">
                                     <p class="title has-text-light">5/10</p>
-                                    <div class="tile is-child box has-background-light" onclick="toggleStuff('content','is-hidden')">
+                                    <div class="tile is-child box has-background-light" onclick="toggleStuff('content_figueira','is-hidden')">
                                         <p class="title">Figueira</p>
                                         <p class="subtitle">Untitled</p>
-
-                                        <div id="content" class=" content is-hidden">
-                                            <figure class="image is-256x256 is-roundeds is-overlay is-pulled-right">
+                                        <!--Hidden Content-->
+                                        <div id="content_figueira" class="content is-hidden">
+                                            <figure class="image is-256x256 is-rounded is-overlay is-pulled-right">
                                                 <img class="is-rounded" src="https://www.residentadvisor.net/images/profiles/figueira.jpg">
                                             </figure>
                                             <p>Desengane-se aquele que pelo seu ar jovem e sorriso aberto, considere Figueira um artista de pouco traquejo. Em poucos anos, tem vindo a afirmar-se enquanto músico e, também, enquanto co-fundador da Untitled, tendo responsabilidade assumida na afirmação do movimento underground da actualidade.</p>
-                                            <p>A sua aprendizagem é feita por escutar e aprender com o que de melhor se faz na música electrónica contemporânea, escolha esta directamente reflectida nos seus sets profundos e contagiantes.</p>
                                             <p>Figueira é uma lufada de ar fresco no quadro da música electrónica nacional, enquanto DJ e, ainda, enquanto feitor das festas mais quentes que se fazem a sul, pela mão da promissora Untitled.</p>
-                                            <p>Este jovem não deixa ninguém indiferente e a sua marca é já visível. É definitivamente um rosto a seguir pelos apreciadores de música electrónica, que promete dar que falar.
                                             </p>
+                                            <p>Texto: Ester Grácio</p>
+                                            <br>
+                                            <a href="https://www.residentadvisor.net/dj/figueira">Resident Advisor</a>
+                                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1881758&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
                                         </div>
+                                            <span class="icon is-hovered is-pulled-right">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
                                     </div>
 
-                                    <div class="tile is-child box">
+                                    <div class="tile is-child box"  onclick="toggleStuff('content_delcio','is-hidden')">
                                         <p class="title">Délcio</p>
                                         <p class="subtitle">Doméstica</p>
+                                        <!--Hidden Content-->
+                                        <div id="content_delcio" class="content is-hidden">
+                                            <figure class="image is-256x256 is-rounded is-overlay is-pulled-right">
+                                                <img class="is-rounded" src="https://www.residentadvisor.net/images/profiles/delcio.jpg">
+                                            </figure>
+                                            <p></p>
+                                            <a href="https://www.residentadvisor.net/dj/delcio">Resident Advisor</a>
+                                        </div>
+                                        <!--More Icon-->
+                                        <span class="icon is-hovered is-pulled-right">
+                                                <i class="fas fa-plus"></i>
+                                        </span>
                                     </div>
 
-                                    <div class="tile is-child box">
+                                    <div class="tile is-child box" onclick="toggleStuff('content_lanuit','is-hidden')">
                                         <p class="title">La Nuit</p>
                                         <p class="subtitle">TOKENCLUB</p>
+                                        <!--Hidden Content-->
+                                        <div id="content_lanuit" class="content is-hidden">
+                                            <figure class="image is-128x128 is-pulled-right">
+                                                <img class="is-rounded" src="https://i1.sndcdn.com/avatars-000277066169-nqur7d-t500x500.jpg">
+                                            </figure>
+                                            <p>La Nuit é um natural transmissor de energia...</p>
+                                            <p>Físicamente ligado ao techno e químicamente ligado ao dance floor, com uma batida fortemente progressiva e ritmo variado, é capaz de atingir o coração mais melódico e súbitamente rebentar uma supernova, tornando impossível não mexer parte alguma do corpo, portanto, é terapêutico.</p>
+                                            <br>
+                                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/292583614&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                                        </div>
+                                        <!--More Icon-->
+                                        <span class="icon is-pulled-right">
+                                                <i class="fas fa-plus"></i>
+                                        </span>
                                     </div>
                                 </article>
                             </div>
@@ -127,14 +166,44 @@
                                 <article class="tile is-parent is-vertical" style="background-color: rgba(25,25,25,0.7)">
 
                                     <p class="title has-text-light">6/10</p>
-                                    <article class="tile is-child box">
+                                    <article class="tile is-child box" onclick="toggleStuff('content_dianamay','is-hidden')">
                                             <p class="title">Diana May</p>
                                             <p class="subtitle">Berlin</p>
+                                            <!--Hidden Content-->
+                                        <div id="content_dianamay" class=" content is-hidden">
+                                            <figure class="image is-128x128 is-rounded is-overlay is-pulled-right">
+                                                <img class="is-rounded" src="https://i1.sndcdn.com/avatars-000501011109-s8bjo5-t500x500.jpg">
+                                            </figure>
+                                            <p>Diana Perova alias Diana May was born in Russia and came to Austria at the age of 10, right now based in Berlin, Germany.</p>
+                                            <p>After many many nights out Diana wanted to pull the strings by herself and started as Light Jockey at a Club called Kottulinsky(Austria).2 Years of experience later Diana May changed to Djing.</p>
+                                            <p>Her passion lies in Tech House & Techno, with bassy vibes & catchy synthesizer.</p>
+                                            <p>Her first release “90´s Machine” with remixes by Michael Nielebock and Lauschtakt & Ulrich makes people get on the dance floor!</p>
+                                            <br>
+                                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/1881758&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                                        </div>
+                                        <!--More Icon-->
+                                        <span class="icon is-hovered is-pulled-right">
+                                                <i class="fas fa-plus"></i>
+                                        </span>
                                     </article>
 
-                                    <article class="tile is-child box">
+                                    <article class="tile is-child box" onclick="toggleStuff('content_vil','is-hidden')">
                                         <p class="title">VIL</p>
                                         <p class="subtitle">Hayes</p>
+                                        <!--Hidden Content-->
+                                        <div id="content_vil" class=" content is-hidden">
+                                            <figure class="image is-128x128 is-overlay is-pulled-right">
+                                                <img class="is-rounded" src="https://i1.sndcdn.com/avatars-000403790001-i73uhn-t500x500.jpg">
+                                            </figure>
+                                            <p>VIL’s refined taste and set building ability has already earned him a place at some of the best clubs in the country, of which Lux Frágil, Gare, and Ministerium are included, and is a regular presence at many of the country’s festivals as well.</p>
+                                            <p>Fast forward to 2018, where alongside Portuguese artists Temudo, menosdois, and Osse, he creates Hayes, a collective focused on showcasing the distinct output of its artists through vinyl and digital releases.</p>
+                                            <p>Already counting with two releases since its inception, their music has already been played and supported by the likes of DVS1, Etapp Kyle, Truncate, Jeroen Search, Ben Klock, Shlomi Aber, and many more players within the scene.</p>
+                                            <br>
+                                            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/489262515&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>                                        </div>
+                                        <!--More Icon-->
+                                        <span class="icon is-hovered is-pulled-right">
+                                                <i class="fas fa-plus"></i>
+                                        </span>
                                     </article>
 
                                 </article>
@@ -143,39 +212,54 @@
                      </div>
                 </div>
              </div>
+            <!--<br>-->
             <br>
-            <br>
-            <audio controls autoplay  id="audio" style="display:none;">
-              <source src="audio/Acronym-16-Cygni.mp3" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-            <i class="fas fa-plus" onclick="muteAudio('audio')"></i>
-            <!--<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/492344556&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>-->
-
+            <!-- Audio & Controler SECTION-->
+            <section class="section">
+                <!--<div id="audio_control" class="container is-pulled-right">
+                    <a class="button is-large is-success is-outlined">
+                        <span class="icon">
+                            <i class="fas fa-volume-up" onclick="playAudio('audio')"></i>
+                        </span>
+                    </a>
+                    <a class="button is-large is-danger is-outlined">
+                        <span class="icon">
+                            <i class="fas fa-volume-off" onclick="muteAudio('audio')"></i>
+                        </span>
+                    </a>
+                <audio controls id="audio" style="display:none;">
+                  <source src="audio/Acronym-16-Cygni.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>-->
+                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/492344556&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                </div>
+            </section>
+            <!-- FOOTER SECTION-->
+            <footer class="footer is-pulled-bottom has-background-dark">
+            <div class="container">
+              <div class="content has-text-centered is-centered has-text-white-ter">
+                <div id="tsp">
+                  <p>
+                    <a href="https://bulma.io">
+                    <img src="https://bulma.io/images/made-with-bulma--dark.png" alt="Made with Bulma" width="128" height="24">
+                    </a>
+                    <small>
+                          <br>
+                          Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.
+                          <br>
+                          Website content licensed <a rel="license" href="https://ciencias.ulisboa.pt/">Gritter</a>.
+                        </small>
+                  </p>
+                </div>
+              </div>
+            </div>
+        </footer>
         </div>
 
 
         <!--// Asteroid field backgroung animation-->
         <script type="text/javascript" src="js/space.js"></script>
 
-        <!--<footer class="footer is-pulled-bottom">-->
-            <!--<div class="container">-->
-              <!--<div class="content has-text-centered is-centered ">-->
-                <!--<div id="tsp">-->
-                  <!--<p>-->
-                    <!--<a href="https://bulma.io">-->
-                    <!--<img src="https://bulma.io/images/made-with-bulma&#45;&#45;dark.png" alt="Made with Bulma" width="128" height="24">-->
-                    <!--</a>-->
-                    <!--<small>-->
-                          <!--<br>-->
-                          <!--Source code licensed <a href="https://opensource.org/licenses/mit-license.php">MIT</a>.-->
-                          <!--<br>-->
-                          <!--Website content licensed <a rel="license" href="https://ciencias.ulisboa.pt/">Gritter</a>.-->
-                        <!--</small>-->
-                  <!--</p>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-        <!--</footer>-->
+
     </body>
 </html>
